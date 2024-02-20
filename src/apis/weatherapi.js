@@ -1,4 +1,3 @@
-const axios = require('axios');
 
 export const geoAPI = {
   method: 'GET',
@@ -8,5 +7,5 @@ export const geoAPI = {
     }
 };
 
-export const apiurl = {url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities'}
+export const apiUrl = 'https://wft-geo-db.p.rapidapi.com/v1/geo'
 
