@@ -15,9 +15,15 @@ const Search = ({ onSearchData }) => {
       `${apiUrl}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
       geoAPI
     )
-      .then((response) => response.json()) // Returns a Promise
-      .then((data) => console.log(data))
-      .then((err) => console.log(err));
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      return data;
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+      return [];
+    });
   }
   return (
     <div>
