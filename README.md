@@ -2,7 +2,7 @@
 
 1. Sign Up on RapidAPI:
 
-- Visit the RapidAPI website [text](https://rapidapi.com/).
+- Visit the RapidAPI website [rapidapi.com](https://rapidapi.com/).
 
 - Sign up for a new account or log in if you already have one.
 
@@ -14,6 +14,6 @@
 
 - Subscribe to the API to get your API key
 
-- For this case we will be using the [text](https://rapidapi.com/wirefreethought/api/geodb-cities).
+- For this case we will be using the [https://rapidapi.com/wirefreethought/api/geodb-cities](https://rapidapi.com/wirefreethought/api/geodb-cities).
 
 - To Intergrate it within our site
