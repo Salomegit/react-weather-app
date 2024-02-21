@@ -14,6 +14,6 @@
 
 - Subscribe to the API to get your API key
 
-- For this case we will be using the [geodb](https://rapidapi.com/wirefreethought/api/geodb-cities).
+- For this case we will be using the [geodb](https://rapidapi.com/wirefreethought/api/geodb-cities) API for our weather application.
 
 - To Intergrate it within our site
