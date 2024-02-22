@@ -2,7 +2,7 @@
 
 1. Sign Up on RapidAPI:
 
-- Visit the RapidAPI website [text](https://rapidapi.com/).
+- Visit the RapidAPI website [rapidapi.com](https://rapidapi.com/).
 
 - Sign up for a new account or log in if you already have one.
 
@@ -14,8 +14,6 @@
 
 - Subscribe to the API to get your API key
 
-- For this case we will be using the [text](https://rapidapi.com/wirefreethought/api/geodb-cities).
+- For this case we will be using the [geodb](https://rapidapi.com/wirefreethought/api/geodb-cities) API for our weather application.
 
-- After subscribing, you'll receive an API key. This key is crucial for making authenticated requests to the APIs you've subscribed to.This is after signing in.
-
-- To Intergrate it within our project
+- To Intergrate it within our site
