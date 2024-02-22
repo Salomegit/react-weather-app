@@ -12,16 +12,17 @@ const Search = ({ onSearchData }) => {
 
   function loadOptions(inputValue) {
     fetch(
-      `${apiUrl}/cities?minPopulation=10000&namePrefix=${inputValue}`,
+      `${apiUrl}/cities?minPopulation=10000000&namePrefix=${inputValue}&id=44`,
       geoAPI
     )
     .then((response) => response.json())
     .then((response) => {
+      console.log(response)
      return {
       options: response.data.map((city) => {
         return {
           value:`${city.latitude} ${city.longitude}` ,
-          label: `${city.name}, ${city.countryCode}`
+          label: `${city.name}   ${city.countryCode}`
 
         }
       })
