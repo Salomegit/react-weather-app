@@ -16,4 +16,6 @@
 
 - For this case we will be using the [text](https://rapidapi.com/wirefreethought/api/geodb-cities).
 
-- To Intergrate it within our site
+- After subscribing, you'll receive an API key. This key is crucial for making authenticated requests to the APIs you've subscribed to.This is after signing in.
+
+- To Intergrate it within our project
