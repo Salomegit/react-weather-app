@@ -11,27 +11,29 @@ const Search = ({ onSearchData }) => {
   }
 
   function loadOptions(inputValue) {
-    fetch(
-      `${apiUrl}/cities?minPopulation=10000000&namePrefix=${inputValue}&id=44`,
+    return fetch(
+      `${apiUrl}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
       geoAPI
     )
-    .then((response) => response.json())
-    .then((response) => {
-      console.log(response)
-     return {
-      options: response.data.map((city) => {
+      .then((response) => response.json())
+      .then((response) => {console.log(response)})
+      .then((response) => {
         return {
-          value:`${city.latitude} ${city.longitude}` ,
-          label: `${city.name}   ${city.countryCode}`
-
-        }
+          options: response.data.map((city) => {
+            return {
+              value: `${city.latitude} ${city.longitude}`,
+              label: `${city.name}   ${city.countryCode}`,
+            };
+          }),
+        };
       })
-     }
-    })
-    .catch((error) => {
-      console.error('Error fetching data:', error);
-      return [];
-    });
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        return [];
+      });
   }
   return (
     <div>
