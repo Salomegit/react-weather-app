@@ -16,4 +16,6 @@
 
 - For this case we will be using the [geodb](https://rapidapi.com/wirefreethought/api/geodb-cities) API for our weather application.
 
-- To Intergrate it within our site
+- To Intergrate it within our project.
+
+- 
