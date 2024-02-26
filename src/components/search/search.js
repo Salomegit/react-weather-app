@@ -10,38 +10,39 @@ const Search = ({ onSearchData }) => {
     onSearchData(searchData);
   }
 
-  async function loadOptions(inputValue ) {
-    try {
-      const response = await fetch(
-        `${apiUrl}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
-        geoAPI
-      );
-  
-      const data = await response.json();
-
-      console.log(data)
-  
-      const result = {
-        options: data.map((city) => ({
-          value: `${city.latitude} ${city.longitude}`,
-          label: `${city.name}   ${city.countryCode}`,
-        })),
-      };
-  
-      console.log(result);
-      
-      return result;
-    } catch (error) {
-      console.error(error);
-      // Handle the error or return a default result if necessary
-      return { options: [] };
-    }
+  function loadOptions(inputValue) {
+    return fetch(`${apiUrl}/cities?minPopulation=1000&namePrefix=${inputValue}`, geoAPI)
+      .then(async (response) => {
+        try {
+          const data = await response.json();
+          console.log(data); // Check the data structure here
+        
+          if (Array.isArray(data)) {
+            const result = {
+              options: data.map((city) => ({
+                value: `${city.latitude} ${city.longitude}`,
+                label: `${city.name}   ${city.countryCode}`,
+              })),
+            };
+            console.log(result);
+            return result;
+          } else {
+            console.error("Unexpected data format. Please check the API response.");
+            return { options: [] }; // Return an empty array in case of unexpected data
+          }
+        } catch (error) {
+          console.error(error);
+          return { options: [] }; // Return an empty array on errors
+        }
+        
   }
+      )
+}
   
 
 
 
-
+  
   //   return fetch(
   //     `${apiUrl}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
   //     geoAPI
