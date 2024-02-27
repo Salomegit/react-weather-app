@@ -14,22 +14,22 @@ const Search = ({ onSearchData }) => {
     return fetch(`${apiUrl}/cities?minPopulation=1000&namePrefix=${inputValue}`, geoAPI)
       .then(async (response) => {
         try {
-          const data = await response.json();
-          console.log(data); // Check the data structure here
+          const responseAsJson = await response.json();
+          console.log(responseAsJson); // Check the data structure here
         
-          if (Array.isArray(data)) {
+          // if (Array.isArray(data)) {
             const result = {
-              options: data.map((city) => ({
+              options: responseAsJson.data.map((city) => ({
                 value: `${city.latitude} ${city.longitude}`,
                 label: `${city.name}   ${city.countryCode}`,
               })),
             };
             console.log(result);
             return result;
-          } else {
-            console.error("Unexpected data format. Please check the API response.");
-            return { options: [] }; // Return an empty array in case of unexpected data
-          }
+          // } else {
+          //   console.error("Unexpected data format. Please check the API response.");
+          //   return { options: [] }; // Return an empty array in case of unexpected data
+          // }
         } catch (error) {
           console.error(error);
           return { options: [] }; // Return an empty array on errors

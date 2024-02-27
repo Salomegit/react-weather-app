@@ -1,5 +1,48 @@
 .container{
     max-width: 1080px;
-    color: brown;
+    /* color: brown; */
     margin: 20px auto;
+
+}
+
+.weather{
+    width:400px;
+    background-color: #333;
+    border-radius: 6px;
+    box-shadow: 10px -2px 20px 2px  rgb(128 128 128/ 30%);
+    margin: 20px auto 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    /* margin:20px; */
+    align-items: center;
+}
+
+.city{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.weather-description{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    margin-top:10px ;
+    letter-spacing: 1px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.weather-icon{
+ width: 90px;
 }
