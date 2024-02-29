@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/index.css";
 
-const Current = () => {
+const Current = ({data}) => {
 
 
   // const name = "john"
@@ -10,14 +10,14 @@ const Current = () => {
     <div className="weather">
       <div className="top">
         <div>
-          <p className="city"> Nairobi</p>
-          <p className="weather-description">Sunny</p>
+          <p className="city"> {data.city}</p>
+          <p className="weather-description">{data.weather[0].description}</p>
         </div>
 
-        <img alt="weather" src="icons/01d.png" className="weather-icon" />
+        <img alt="weather" src={`icons/${data.weather[0].icon}.png`} className="weather-icon" />
       </div>
       <div className="bottom">
-        <p className="temperature">18°c</p>
+        <p className="temperature">{data.main.temp}°c</p>
         <div className="details">
           <div className="parameter-row">
             <span className="parameter-label">Details</span>

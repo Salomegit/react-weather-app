@@ -15,13 +15,13 @@ const Search = ({ onSearchData }) => {
       .then(async (response) => {
         try {
           const responseAsJson = await response.json();
-          // console.log(responseAsJson); // Check the data structure here
+          console.log(responseAsJson); // Check the data structure here
         
           // if (Array.isArray(data)) {
             const result = {
               options: responseAsJson.data.map((city) => ({
                 value: `${city.latitude} ${city.longitude}`,
-                label: `${city.name}   ${city.countryCode}`,
+                label: `${city.name} ${city.countryCode}`,
               })),
             };
             console.log(result);
