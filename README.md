@@ -18,4 +18,10 @@
 
 - To Intergrate it within our project.
 
+- This API will enable us to get data of all the countries in the world.
+
+- With this data we will map it to the Open Weather API and be able to get either current or forecast weather for the application.
+
+- Both APIs will be mapped using the latitude and longitude parameters
+
 - 
